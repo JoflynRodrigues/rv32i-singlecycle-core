@@ -54,8 +54,7 @@ Single-cycle datapath implementation.
 ## Tools Used
 
 - Verilog HDL
-- ModelSim / QuestaSim (Simulation)
-- GTKWave (Waveform Analysis)
+- Xilinx Vivado
 
 ---
 
