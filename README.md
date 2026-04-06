@@ -59,5 +59,5 @@ Single-cycle datapath implementation.
 
 ---
 
-## Project Structure
+
 
