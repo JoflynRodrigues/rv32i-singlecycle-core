@@ -18,7 +18,7 @@ The design was developed to understand ISA-to-RTL translation, datapath construc
 - I-Type (ADDI, ANDI, ORI, XORI, SLTI, SLTIU, SLLI, SRLI, SRAI)
 - Load (LW)
 - Store (SW)
-- Branch (BEQ, BNE, BLT, BGE, BLTU, BGEU)
+- Branch (BEQ, BNE, BLT, BGE)
 - U-Type (LUI, AUIPC)
 - Jump (JAL, JALR)
 
