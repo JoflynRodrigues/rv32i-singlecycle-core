@@ -66,25 +66,25 @@ module control_unit(
             Branch = 1;
             ALUCtrl = 4'b0001; // SUB
         end    
-        // ================= JAL =================
+        //JAL
         7'b1101111: begin
             Regwrite = 1;
             Jump = 1;
         end
 
-        // ================= JALR =================
+        //JALR
         7'b1100111: begin
             Regwrite = 1;
             ALUsrc = 1;
             Jalr = 1;
         end
 
-        // ================= LUI =================
+        // LUI
         7'b0110111: begin
             Regwrite = 1;
         end
 
-        // ================= AUIPC =================
+        //AUIPC
         7'b0010111: begin
             Regwrite = 1;
         end
