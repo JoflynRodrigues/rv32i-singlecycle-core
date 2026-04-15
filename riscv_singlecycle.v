@@ -8,8 +8,6 @@ module riscv_singlecycle(
 wire [31:0] PC;
 wire [31:0] PC_next;
 
-
-
 pc PC_reg(
     .clk(clk),
     .reset(reset),
@@ -104,10 +102,8 @@ assign write_data =
         (instr[6:0] == 7'b0010111) ? PC + immi :   // AUIPC
         MemToReg ? mem_read_data :
         alu_result;
-// BRANCH LOGIC
-// ===============================
 
-
+    // BRANCH LOGIC
 wire take_branch;
 assign take_branch = Branch & (
                         (instr[14:12] == 3'b000 && zero) ||     // beq
@@ -117,9 +113,7 @@ assign take_branch = Branch & (
                      );
 
 
-// ===============================
 // NEXT PC LOGIC
-// ===============================
 assign PC_next =
         Jump  ? PC + immi :
         Jalr  ? (reg_data1 + immi) & ~1 :
